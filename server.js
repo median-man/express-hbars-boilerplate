@@ -15,10 +15,6 @@ app.use(sessionMiddleware);
 app.use(express.static(path.join(__dirname, "public")));
 app.engine("handlebars", exphbs({ helpers }));
 app.set("view engine", "handlebars");
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}; session id? ${req.session?.id}`);
-  next();
-});
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
