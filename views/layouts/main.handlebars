@@ -10,10 +10,16 @@
 <body>
     <nav>
       <a href="/">Home</a>
-      <a href="/login">login</a>
-      <a href="/signup">signup</a>
-      <button class="btn btn-logout">Log Out</button>
+      {{#if isLoggedIn}}
+        <button class="btn btn-logout">Log Out</button>
+      {{else}}
+        <a href="/login">login</a>
+        <a href="/signup">signup</a>
+      {{/if}}
     </nav>
     {{{body}}}
+    {{#if isLoggedIn}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 </html>
