@@ -6,7 +6,7 @@ This boilerplate may be used as a starting point for building a full-stack app w
 
 1. Run `npm i`.
 2. You will need an existing MySQL database.
-3. Create `.env` file with  MySQL credentials for local development and a SECRET. Refer to [.env.EXAMPLE](./.env.EXAMPLE)
+3. Create `.env` file with MySQL credentials for local development and a SECRET. Refer to [.env.EXAMPLE](./.env.EXAMPLE)
 4. Run `npm start` to start the app.
 
 ## Sessions
@@ -22,3 +22,7 @@ Passwords are hashed using [bcrypt](https://www.npmjs.com/package/bcrypt). Middl
 [Handlebars.js](https://handlebarsjs.com/) and [express-handlebars](https://www.npmjs.com/package/express-handlebars) are used for rendering templates.
 
 You can add your own custom helper functions by exporting them from [util/helpers.js](./util/helpers.js).
+
+## Code Style
+
+[ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) are included for enforcing consistent code quality and format. The default configuration includes the ESLint recommended plugin, the Prettier plugin, plus a couple of additional rules. Modify [.eslintrc.js](./.eslintrc.json) to customize the rules.
